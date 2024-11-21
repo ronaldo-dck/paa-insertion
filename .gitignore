@@ -1,0 +1,4 @@
+*.x
+./.vscode
+out.txt
+nums.txt
