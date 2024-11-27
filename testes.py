@@ -5,8 +5,6 @@ import time
 from tqdm import tqdm
 
 paths = [
-    "./datasets/Aleatórios",
-    "./datasets/Decrescentes",
     "./datasets/Ordenados",
     "./datasets/ParcialmenteOrdenados",
 ]
@@ -31,21 +29,21 @@ lists_args = [['I'],
               ['B', '1000'],
               ]
 
-with open('logs/tempos.csv','w') as f:
+with open('logs/temposO0.csv','a') as f:
     f.write('I;time;file;args')
 
 for idx, file_list in enumerate(file_lists):
     for file in tqdm(file_list, desc=f"{paths[idx]}", leave=False):
         # print(file)
         for args in lists_args:
-            for inter in range(6):
-                command = ['./insertion.x'] + [file] + args
+#            for inter in range(6):
+                command = ['./insertion'] + [file] + args
                 # print(command)
                 start_time = time.time()
                 result = subprocess.run(
                     command, capture_output=True, text=True, check=True)
                 end_time = time.time()
                 execution_time = end_time - start_time
-                linha_resultado = f'{inter};{execution_time:.4f};{file};{args}\n'
-                with open('logs/tempos.csv','a+') as f:
+                linha_resultado = f'{1};{execution_time:.4f};{file};{args}\n'
+                with open('logs/temposO0.csv','a+') as f:
                     f.write(linha_resultado)
