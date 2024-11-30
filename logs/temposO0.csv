@@ -51,7 +51,7 @@ I;time;file;args
 1;25.143;./datasets/Aleatórios/a100000.txt;['B', '10']
 1;0.2679;./datasets/Aleatórios/a100000.txt;['B', '100']
 1;0.0514;./datasets/Aleatórios/a100000.txt;['B', '1000']
-1;1.091.823;./datasets/Aleatórios/a200000.txt;['I']
+1;1091.823;./datasets/Aleatórios/a200000.txt;['I']
 1;101.927;./datasets/Aleatórios/a200000.txt;['B', '10']
 1;10.417;./datasets/Aleatórios/a200000.txt;['B', '100']
 1;0.1363;./datasets/Aleatórios/a200000.txt;['B', '1000']
